@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+ 
+Route::namespace('admin')->prefix('admin')->group(function () {
+    Route::get('/dashboard',function(){
+        return view('admin.index');
+    });
 });

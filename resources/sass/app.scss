@@ -1,8 +1,15 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '../admin/bootstrap/css/bootstrap.min.css';
+@import '../admin/dist/css/alt/AdminLTE-bootstrap-social.min.css';
+@import '../admin/dist/css/alt/AdminLTE-fullcalendar.min.css';
+@import '../admin/dist/css/alt/AdminLTE-select2.min.css';
+@import '../admin/plugins/bootstrap-slider/slider.css';
+@import '../admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css';
+@import '../admin/plugins/colorpicker/bootstrap-colorpicker.min.css';
+@import '../admin/plugins/datatables/dataTables.bootstrap.css';
+@import '../admin/plugins/datatables/jquery.dataTables.min.css';
+@import '../admin/plugins/datepicker/datepicker3.css';
+@import '../admin/plugins/daterangepicker/daterangepicker.css';
+@import '../admin/plugins/morris/morris.css';
+@import '../admin/plugins/pace/pace.min.css';
+@import '../admin/dist/css/AdminLTE.min.css';
+@import '../admin/dist/css/skins/_all-skins.min.css';
