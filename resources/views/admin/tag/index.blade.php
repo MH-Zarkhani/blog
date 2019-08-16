@@ -1,8 +1,8 @@
 @extends('admin.index')
 
-@section('title','Category')
+@section('title','Tag')
 
-@section('content-header','دسته بندی')
+@section('content-header','برچسب')
 
 @section('content')
 
@@ -10,23 +10,24 @@
         <div class="col-xs-12">
 
             <div class="box">
-                <form action="<?= isset($category) ? route('admin.category.update', $category) : route('admin.category.store')  ?>"
+                <form action="<?= isset($tag) ? route('admin.tag.update', $tag) : route('admin.tag.store')  ?>"
                       method="post">
-                    @if(isset($category))
+                    @if(isset($tag))
                         @method('PUT')
                     @endif
                     @csrf
                     <div class="box-header">
-                        <h3 class="box-title"><?= isset($category) ? 'ویرایش دسته بندی :' : 'ایجاد دسته بندی جدید :' ?></h3>
+                        <h3 class="box-title"><?= isset($tag) ? 'ویرایش برچسب :' : 'ایجاد برچسب جدید :' ?></h3>
                         <div class="box-tools">
                             <div class="input-group input-group-sm" style="width: 300px;">
-                                <input name="title" class="form-control pull-left" placeholder="نام دسته را وارد نمایید"
-                                       value="<?= isset($category) ? $category->title : old('title')?>" type="text">
+                                <input name="title" class="form-control pull-left"
+                                       placeholder="نام برچسب را وارد نمایید"
+                                       value="<?= isset($tag) ? $tag->title : old('title')?>" type="text">
                                 <div class="input-group-btn">
                                     <button type="submit"
-                                            class="btn btn-primary"><?= isset($category) ? 'ویرایش' : 'افزودن' ?></button>
-                                    @if( isset($category) )
-                                        <a href="{{ route('admin.category.index') }}"  class="btn btn-default">بازگشت</a>
+                                            class="btn btn-primary"><?= isset($tag) ? 'ویرایش' : 'افزودن' ?></button>
+                                    @if( isset($tag) )
+                                        <a href="{{ route('admin.tag.index') }}"  class="btn btn-default">بازگشت</a>
                                     @endif
                                 </div>
                             </div>
@@ -55,19 +56,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @if( !empty($categories) )
-                            @foreach($categories as $category)
+                        @if( !empty($tags) )
+                            @foreach($tags as $tag)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $category->title }}</td>
+                                    <td>{{ $tag->title }}</td>
                                     <td>20</td>
-                                    <td>{{ $category->updated_at }}</td>
+                                    <td>{{ $tag->updated_at }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <form action="{{ route('admin.category.delete',$category) }}" method="post">
+                                            <form action="{{ route('admin.tag.delete',$tag) }}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <a href="{{ route('admin.category.edit',$category) }}"
+                                                <a href="{{ route('admin.tag.edit',$tag) }}"
                                                    class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                                 <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                             </form>
@@ -77,7 +78,7 @@
                             @endforeach
                         @else
                             <tr>
-                                <td><h3 class="text-center">'دسته بندی وجود ندارد'</h3></td>
+                                <td><h3 class="text-center">'برچسب وجود ندارد'</h3></td>
                             </tr>
                         @endif
 

@@ -27,6 +27,7 @@
       <ul class="sidebar-menu">
         <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> <span>داشبورد</span></a></li>
         <li><a href="{{ route('admin.category.index') }}"><i class="fa fa-th-list"></i> <span>دسته بندی</span></a></li>
+        <li><a href="{{ route('admin.tag.index') }}"><i class="fa fa-tags"></i> <span>برچسب</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
