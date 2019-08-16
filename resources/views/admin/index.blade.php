@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>Admin | @yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -19,6 +19,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{ asset('admin/dist/css/skins/_all-skins.min.css') }}">
+  {{--custom css--}}
+  <link rel="stylesheet" href="{{ asset('admin/custom.css') }}">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -35,7 +37,12 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 
-    @yield('breadcrumb')
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        @yield('content-header')
+      </h1>
+    </section>
 
     <!-- Main content -->
     <section class="content">

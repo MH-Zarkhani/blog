@@ -8,8 +8,8 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>محمد حسن زرخوانی</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> انلاین </a>
         </div>
       </div>
       <!-- search form -->
@@ -25,8 +25,8 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">داشبورد</li>
         <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> <span>داشبورد</span></a></li>
+        <li><a href="{{ route('admin.category.index') }}"><i class="fa fa-th-list"></i> <span>دسته بندی</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
