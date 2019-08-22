@@ -11,3 +11,9 @@ else {
         $('body').toggleClass('sidebar-open');
     });
 }
+
+// select2
+$('.select2').select2();
+
+// CK Editor
+CKEDITOR.replace('editor1');

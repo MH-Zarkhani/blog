@@ -34,15 +34,7 @@
                         </div>
                     </div>
                 </form>
-                @if( $errors->any() )
-                    <div class="callout callout-danger">
-                        <ul>
-                            @foreach( $errors->all() as $error )
-                                <li> {{ $error }} </li>
-                            @endforeach
-                        </ul>
-                    </div>
-            @endif
+                @include('admin.layouts.error')
             <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
                     <table class="table direction table-hover">
@@ -61,7 +53,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $tag->title }}</td>
-                                    <td>20</td>
+                                    <td>{{ $tag->posts()->count() }}</td>
                                     <td>{{ jdate($tag->updated_at)->ago() }}</td>
                                     <td>
                                         <div class="btn-group">

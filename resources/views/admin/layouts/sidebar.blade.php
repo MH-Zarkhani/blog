@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-right image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>محمد حسن زرخوانی</p>
@@ -25,9 +25,10 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> <span>داشبورد</span></a></li>
+        <li><a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-dashboard"></i> <span>داشبورد</span></a></li>
         <li><a href="{{ route('admin.category.index') }}"><i class="fa fa-th-list"></i> <span>دسته بندی</span></a></li>
-        <li><a href="{{ route('admin.tag.index') }}"><i class="fa fa-tags"></i> <span>برچسب</span></a></li>
+          <li><a href="{{ route('admin.post.index') }}"><i class="fa fa-sticky-note"></i> <span>مقالات</span></a></li>
+          <li><a href="{{ route('admin.tag.index') }}"><i class="fa fa-tags"></i> <span>برچسب</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

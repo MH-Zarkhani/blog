@@ -16,11 +16,14 @@
     <link rel="stylesheet" href="{{ asset('admin/bower_components/Ionicons/css/ionicons.min.css') }}">
     <!-- jvectormap -->
     <link rel="stylesheet" href="{{ asset('admin/bower_components/jvectormap/jquery-jvectormap.css') }}">
+    <!-- other css -->
+    @yield('css')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin/dist/css/AdminLTE.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin/dist/css/skins/_all-skins.min.css') }}">
+    <!--    custom css-->
     <link rel="stylesheet" href="{{ asset('admin/custom.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -87,6 +90,7 @@
 <script src="{{ asset('admin/dist/js/pages/dashboard2.js')  }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin/dist/js/demo.js')  }}"></script>
+@yield('js')
 <script src="{{ asset('admin/custom.js')  }}"></script>
 </body>
 </html>
