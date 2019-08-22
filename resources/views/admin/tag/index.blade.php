@@ -62,7 +62,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $tag->title }}</td>
                                     <td>20</td>
-                                    <td>{{ $tag->updated_at }}</td>
+                                    <td>{{ jdate($tag->updated_at)->ago() }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <form action="{{ route('admin.tag.delete',$tag) }}" method="post">

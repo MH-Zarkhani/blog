@@ -61,7 +61,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $category->title }}</td>
                                     <td>20</td>
-                                    <td>{{ $category->updated_at }}</td>
+                                    <td>{{ jdate($category->updated_at)->ago() }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <form action="{{ route('admin.category.delete',$category) }}" method="post">
